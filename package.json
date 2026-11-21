@@ -1,0 +1,22 @@
+{
+  "name": "webblox",
+  "private": true,
+  "type": "module",
+  "description": "Roblox's official browser client (WebClientApp), self-hosted",
+  "scripts": {
+    "start": "bun server.ts",
+    "fetch:webblox": "node scripts/fetch-webblox.mjs",
+    "test": "bun test",
+    "typecheck": "tsc",
+    "build:pages": "node scripts/build-pages.mjs",
+    "deploy:pages": "node scripts/build-pages.mjs && npx wrangler pages deploy dist --project-name webblox"
+  },
+  "dependencies": {
+    "@mercuryworkshop/epoxy-transport": "3.0.1",
+    "@mercuryworkshop/wisp-js": "0.5.3"
+  },
+  "devDependencies": {
+    "@types/bun": "^1.3.13",
+    "typescript": "^5.9.3"
+  }
+}
